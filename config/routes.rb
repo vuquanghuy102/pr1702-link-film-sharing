@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "static_pages/genres"
 
   resources :posts, only: [:show]
+  resources :search, only: [:index]
 end

@@ -39,12 +39,12 @@
 											<div class="wthree-news-top-left">
 												<div class="col-md-12 w3-agileits-news-left">
 													<div class="col-sm-4 wthree-news-img">
-														<a class="image-post-news">
+														<%= link_to post_path(post), class: "image-post-news" do %>
 															<%= image_tag(post.image) %>
-														</a>
+														<% end %>
 													</div>
 													<div class="col-sm-7 wthree-news-info">
-														<h5><%= post.title %></h5>
+														<h5><%= link_to post.title, post_path(post) %></h5>
 														<p><%= post.original_name %></p>
 														<p>Người đăng: <%= post.user.name %></p>
 														<p><%= truncate(post.content, length: 230) %></p>

@@ -5,10 +5,10 @@
         <a href="/"><h1>One<span>Movies</span></h1></a>
       </div>
       <div class="w3_search">
-        <form action="#" method="post">
-          <input type="text" name="Search" placeholder="Search" required="">
-          <input type="submit" value="Go">
-        </form>
+        <%= search_form_for @q, url: search_index_path do |f| %>
+          <%= f.text_field :title_or_original_name_cont, placeholder:"Search" %>
+          <%= f.submit value:"Go" %>
+        <% end %>
       </div>
       <div class="w3l_sign_in_register">
         <ul>

@@ -3,7 +3,6 @@
 <html lang="en">
 <head>
 </head>
-
 <body>
 <!-- banner-bottom -->
   <div class="banner-bottom">
@@ -22,7 +21,7 @@
                   </a>
                   <div class="mid-1 agileits_w3layouts_mid_1_home">
                     <div class="w3l-movie-text">
-                      <h6><%= post.title %></h6>
+                      <h6><%= link_to post.title, post_path(post) %></h6>
                     </div>
                     <div class="mid-2 agile_mid_2_home">
                       <%= post.year %>
@@ -54,7 +53,7 @@
 </div>
 <!-- general -->
   <div class="general">
-    <h4 class="latest-text w3_latest_text">Featured Movies</h4>
+    <h4 class="latest-text w3_latest_text">FEATURED MOVIES</h4>
     <div class="container">
       <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
         <ul id="myTab" class="nav nav-tabs" role="tablist">
@@ -69,13 +68,12 @@
               <% if @posts.present? %>
                 <% @posts.each do |post| %>
                   <div class="col-md-2 w3l-movie-gride-agile">
-                    <a class="hvr-shutter-out-horizontal"><%= image_tag(post.image) %>
-                    <!-- <img src="images/m15.jpg" title="album-name" class="img-responsive" alt=" " /> -->
+                    <a class="hvr-shutter-out-horizontal"><%= link_to image_tag(post.image), post_path(post) %>
                       <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
                     </a>
                     <div class="mid-1 agileits_w3layouts_mid_1_home">
                       <div class="w3l-movie-text">
-                        <h6><%= post.title %></h6>
+                        <h6><%= link_to post.title, post_path(post) %></h6>
                       </div>
                       <div class="mid-2 agile_mid_2_home">
                         <%= post.year %>
