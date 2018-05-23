@@ -4,14 +4,14 @@ class CreatePosts < ActiveRecord::Migration[5.0]
       t.string :title
       t.string :original_name
       t.text :content
-      t.date :year
+      t.integer :year
       t.string :magnet_link
       t.string :subscene
       t.string :directors
       t.string :cats
       t.integer :view
       t.string :image
-      t.time :time
+      t.integer :time
       t.string :nation
       t.integer :category_id
       t.integer :user_id

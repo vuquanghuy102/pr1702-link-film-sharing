@@ -1,11 +1,16 @@
 class StaticPagesController < ApplicationController
-  def index; end
+  def home
+    @category = Category.all
+    @posts = Post.load_info
+  end
 
-  def contact; end
+  def contact
+    @category = Category.all
+  end
 
-  def news; end
+  def news
+    @category = Category.all
+  end
 
   def genres; end
-
-  def country ; end
 end
