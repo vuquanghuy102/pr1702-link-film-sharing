@@ -1,0 +1,101 @@
+<% provide(:title, "Posts") %>
+<div class="container">
+  <div class="agileits-post-top">
+    <ol class="breadcrumb">
+      <li><%= link_to "Home", root_path %></li>
+      <li class="active">Post</li>
+    </ol>
+  </div>
+  <div class="post-page-agile-info">
+    <div class="show-top-grids-w3lagile">
+      <div class="col-md-8 post-left">
+        <div class="row-1">
+          <div class="col-md-4 info-post-image">
+            <div class="image-info">
+              <img><%= image_tag(@post.image) %>
+            </div>
+          </div>
+          <div class="col-md-8 info-post">
+            <div class="post-info">
+              <h3><%= @post.title %></h3>
+              <p><%= @post.original_name %></p>
+              <p>
+                <span class="boder-post-info"><%= @post.year %></span>
+                <span class="boder-post-info"><%= @post.time %> min</span>
+                <span ><%= @post.category_name %></span>
+              </p>
+              <p class="poster-info">Người đăng: <%= @post.user.name %></p>
+              <p class="directors-info">Đạo diễn: <%= @post.directors %></p>
+              <p class="cats-info">Diễn viên: <%= @post.cats %></p>
+              <p class="nation-info">Nước sản xuất: <%= @post.nation %></p>
+              <p class="view-info">Lượt xem: <%= @post.view %></p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row-2">
+          <div class="menu-info-post">
+            <ul class="nav nav-info-post">
+              <li class="col-md-3 item-info-post" value="1">
+                <a href="" class="info-content">Nội dung</a>
+              </li>
+              <li class="col-md-3 item-info-post" value="2">
+                <a href="" class="info-trailer">Trailer</a>
+              </li>
+              <li class="col-md-3 item-info-post" value="3">
+                <a href="" class="info-ingredient">Thành phần</a>
+              </li>
+              <li class="col-md-3 item-info-post" value="4">
+                <a href="" class="info-comment">Bình luận</a>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+        <div class="row-3">
+          <div class="info-content-post">
+            <p class="content-post">Nội dung: </p>
+            <p><%= @post.content %></p>
+            <p class="magnet-link">Magnet Link: </p>
+            <p><%= @post.magnet_link %></p>
+            <p class="subscene">Subscene: </p>
+            <p><%= @post.subscene %></p>
+          </div>
+        </div>
+        <div class="row-4">
+          <div class="info-trailer-post">
+            <iframe class="playTrailer" src="https://www.youtube.com/embed/<%= @post.link_trailer %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
+          </div>
+        </div>
+        <div class="row-5">
+          <div class="info-ingredient-post">
+            <p class="directors-post">Đạo diễn</p>
+            <p><%= @post.directors %></p>
+            <p class="cats-post">Diễn viên</p>
+            <p><%= @post.cats %></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 single-right">
+        <h3>Up Next</h3>
+        <div class="single-grid-right">
+          <% if @posts.present? %>
+            <% @posts.each do |post| %>
+              <div class="single-right-grids">
+                <div class="col-md-4 single-right-grid-left">
+                  <img class="img-post-new"><%= link_to image_tag(post.image), post_path(post) %>
+                </div>
+                <div class="col-md-8 single-right-grid-right">
+                  <a class="title"><%= link_to post.title, post_path(post) %></a>
+                  <p class="au-name"><%= post.original_name %></p>
+                  <p class="poster"><a><%= post.user.name %></a></p>
+                  <p class="views"><%= post.view %> views</p>
+                </div>
+                <div class="clearfix"> </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
