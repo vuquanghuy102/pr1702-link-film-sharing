@@ -31,14 +31,14 @@ ActiveRecord::Schema.define(version: 20180516113410) do
     t.string   "title"
     t.string   "original_name"
     t.text     "content",       limit: 65535
-    t.date     "year"
+    t.integer  "year"
     t.string   "magnet_link"
     t.string   "subscene"
     t.string   "directors"
     t.string   "cats"
     t.integer  "view"
     t.string   "image"
-    t.time     "time"
+    t.integer  "time"
     t.string   "nation"
     t.integer  "category_id"
     t.integer  "user_id"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20180516113410) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
