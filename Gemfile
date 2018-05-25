@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'devise'
+gem "omniauth-facebook"
+gem "omniauth-google"
 gem 'cancancan', '~> 2.0'
 gem 'config'
 gem "mysql2",  ">= 0.3.18", "< 0.5"
