@@ -666,7 +666,7 @@ li.list-group-item1 {
 .label {
 	font-weight: 300 !important;
 	border-radius:4px;
-}  
+}
 .grid_5{
 	background:none;
 	padding:2em 0;
@@ -839,9 +839,6 @@ h2.typoh2{
 	.grid_4 {
 		margin-top: 18px;
 	}
-	h3.title {
-		font-size: 1.6em;
-	}
 	.alert, p,ol.breadcrumb li, .grid_3 p,.well, ul.list-group li, li.list-group-item1,a.list-group-item {
 		font-size: 13px;
 	}
@@ -886,7 +883,7 @@ h2.typoh2{
     -ms-transition: 0.5s all;
     -moz-transition: 0.5s all;
     cursor: pointer;
-} 
+}
 .icon-box:hover {
     background: #000;
 	transition:0.5s all;
@@ -905,11 +902,11 @@ h2.typoh2{
     float: left;
     width: 12.5%;
     height: 115px;
-    padding: 10px; 
+    padding: 10px;
     line-height: 1.4;
-    text-align: center;  
+    text-align: center;
     font-size: 12px;
-    list-style-type: none;	
+    list-style-type: none;
 }
 .codes .bs-glyphicons .glyphicon {
     margin-top: 5px;
@@ -927,7 +924,7 @@ h2.typoh2{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	color: #777;
-} 
+}
 .codes .bs-glyphicons .glyphicon-class {
     display: block;
     text-align: center;
@@ -980,7 +977,7 @@ h3.agileits-icons-title {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 	color: #777;
-} 
+}
 .icons .bs-glyphicons .glyphicon-class {
     display: block;
     text-align: center;
@@ -1000,7 +997,7 @@ h3.head {
 	bottom: 20px;
 	right: 2%;
 	overflow: hidden;
-	z-index: 999; 
+	z-index: 999;
 	width: 32px;
 	height: 32px;
 	border: none;
@@ -1288,7 +1285,7 @@ h3.head {
 @media (max-width: 480px){
 	.w3layouts_logo a h1 {
 		font-size: 2.5em;
-		background: url(../images/1.jpg) no-repeat 71px 6px;
+		background: url(app/assets/images/1.jpg) no-repeat 71px 6px;
 		background-size: 40%;
 		padding-right: 1.4em;
 		padding-bottom: 0.2em;
@@ -1388,7 +1385,7 @@ h3.head {
 		margin: 0 auto;
 	}
 	.w3layouts_logo a h1 {
-		background: url(../images/1.jpg) no-repeat 75px 5px;
+		background: url(app/assets/images/1.jpg) no-repeat 75px 5px;
 		background-size: 46%;
 	}
 	.w3_search {
@@ -1447,7 +1444,7 @@ h3.head {
 }
 @media (max-width: 320px){
 	.w3layouts_logo a h1 {
-		background: url(../images/1.jpg) no-repeat 61px 5px;
+		background: url(app/assets/images/1.jpg) no-repeat 61px 5px;
 		background-size: 46%;
 		font-size: 2em;
 	}
@@ -1513,4 +1510,167 @@ h3.head {
 	h3.head {
 		font-size: 1.8em;
 	}
+}
+
+.image-post-news {
+  width: 170px;
+}
+
+.agileits-post-top {
+  margin-top: 55px;
+}
+
+.info-post {
+  color: white;
+}
+
+.au-name {
+  margin: 0 0 0em 0;
+  font-weight: 400;
+  color: #212121;
+  text-decoration: none;
+}
+
+.single-right-grids {
+  margin-bottom: 5px;
+}
+
+.post-left {
+}
+
+.boder-post-info {
+  border-radius: 3px;
+  border: 1px solid;
+  border-color: yellow;
+  padding: 1px 5px;
+}
+
+.poster-info{
+  margin-top: 15px;
+  border-bottom: 1px solid;
+  border-color: yellow;
+}
+
+.directors-info {
+  margin-top: 10px;
+  border-bottom: 1px solid;
+  border-color: yellow;
+}
+
+.cats-info {
+  margin-top: 10px;
+  border-bottom: 1px solid;
+  border-color: yellow;
+}
+
+.nation-info {
+  margin-top: 10px;
+  border-bottom: 1px solid;
+  border-color: yellow;
+}
+
+.view-info {
+  margin-top: 10px;
+  border-bottom: 1px solid;
+  border-color: yellow;
+}
+
+.row-1 {
+  padding: 15px 0;
+  background-color: #333;
+  width: 100%;
+  height: 300px;
+}
+
+.row-2 {
+  /*background-color: #333;*/
+}
+
+.nav-info-post {
+  margin-top: 15px;
+}
+
+.menu-info-post {
+  background-color: #333;
+  height: 300px;
+}
+
+.item-info-post {
+  padding: 0px;
+  font-size: 18px;
+}
+
+.info-content {
+  text-align: center;
+  width: 100%;
+}
+
+.info-trailer {
+  text-align: center;
+}
+
+.info-ingredient {
+  text-align: center;
+}
+
+.info-comment {
+  text-align: center;
+}
+
+.info-content-post {
+  margin-top: 10px;
+  background-color: #333;
+  color: #7a8293;
+}
+
+.content-post{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.magnet-link {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.subscene {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info-trailer-post {
+  margin-top: 10px;
+  background-color: #333;
+  color: #7a8293;
+  height: 400px;
+}
+
+.playTrailer {
+  width: 100%;
+  height: 100%;
+}
+
+.info-ingredient-post {
+  margin-top: 10px;
+  background-color: #333;
+  color: #7a8293;
+  height: 200px;
+}
+
+.directors-post {
+  font-size: 20px;
+  color: #fff;
+  border-bottom: 1px solid;
+  border-color: yellow;
+  margin-bottom: 15px
+}
+
+.cats-post {
+  font-size: 20px;
+  color: #fff;
+  border-bottom: 1px solid;
+  border-color: yellow;
+  margin-top: 20px;
+  margin-bottom: 15px
 }

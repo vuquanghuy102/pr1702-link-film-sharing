@@ -13,6 +13,7 @@ class CreatePosts < ActiveRecord::Migration[5.0]
       t.string :image
       t.integer :time
       t.string :nation
+      t.string :link_trailer
       t.integer :category_id
       t.integer :user_id
 

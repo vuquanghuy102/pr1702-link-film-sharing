@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get "/news", to: "static_pages#news"
   get "/contact", to: "static_pages#contact"
   get "static_pages/genres"
+
+  resources :posts, only: [:show]
 end
