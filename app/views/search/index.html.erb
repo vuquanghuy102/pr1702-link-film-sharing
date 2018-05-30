@@ -1,0 +1,35 @@
+<div class="general">
+  <h4 class="latest-text w3_latest_text"><%= @title_search %></h4>
+  <div class="container">
+    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+      <div id="myTabContent" class="tab-content">
+        <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+          <div class="w3_agile_featured_movies">
+            <% if @posts.present? %>
+              <% @posts.each do |post| %>
+                <div class="col-md-2 w3l-movie-gride-agile">
+                  <a class="hvr-shutter-out-horizontal"><%= image_tag(post.image) %>
+                    <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                  </a>
+                  <div class="mid-1 agileits_w3layouts_mid_1_home">
+                    <div class="w3l-movie-text">
+                      <h6><%= post.title %></h6>
+                    </div>
+                    <div class="mid-2 agile_mid_2_home">
+                      <%= post.year %>
+                      View: <%= post.view %>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div class="ribben">
+                    <p>NEW</p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          <div class="clearfix"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
