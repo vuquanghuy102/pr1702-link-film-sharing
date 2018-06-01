@@ -291,7 +291,6 @@ h4.latest-text {
     text-transform: uppercase;
     margin-bottom: 1em;
     padding: 0.3em 0.5em;
-    margin-left: 3em;
 }
 .review-slider {
     margin: 1.4em 0 1.4em 0;
@@ -370,7 +369,7 @@ ol.breadcrumb li a {
 	.w3l-movie-gride-agile1 {
 		width: 94% !important;
 	}
-	
+
 }
 @media (max-width:991px){
 	.w3l-movie-gride-agile {
@@ -406,7 +405,7 @@ ol.breadcrumb li a {
 			margin-bottom: 4%;
 			float: left;
 			width: 47%;
-		  
+
 	}
 	.blog-pagenat-wthree ul li a {
 		padding: 8px 0.9em;
@@ -420,7 +419,7 @@ ol.breadcrumb li a {
 			float: left;
 			width: 48%;
 			padding:0;
-		  
+
 	}
 }
 @media (max-width:384px){
