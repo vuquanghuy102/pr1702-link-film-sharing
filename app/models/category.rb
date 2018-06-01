@@ -5,4 +5,8 @@ class Category < ApplicationRecord
   scope :load_name_category, -> {
     select ("id, name")
   }
+
+  scope :load_info, -> {
+    select ("id, name")
+  }
 end
