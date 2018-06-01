@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "/contact", to: "static_pages#contact"
   get "static_pages/genres"
 
-  resources :posts, only: [:show]
+  resources :posts, only: [:show] do
+    resources :comments
+  end
   resources :search, only: [:index]
 end

@@ -1,6 +1,9 @@
 User.create! name:  "User",
   email: "user@gmail.com",
   password: "123456"
+User.create! name:  "Huy",
+  email: "huy@gmail.com",
+  password: "123456"
   # password_confirmation: "123456",
   # address: "Hanoi",
   # activated: true,
