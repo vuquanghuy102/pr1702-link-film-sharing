@@ -21,8 +21,7 @@ User.create! name:  "Huy",
     # activated_at: Time.zone.now
 end
 
-["Bí Ẩn","Chiến Tranh","Hài Hước","Hành Động","Hoạt Hình","Hài Hước","Kinh Dị","Phép Thuật","Phiêu Lưu","Tài Liệu","Tâm Lý","
-Tình Cảm","Viễn Tưởng","Võ Thuật"].each do |name|
+["Bí Ẩn","Chiến Tranh","Khoa Học","Hành Động","Hoạt Hình","Hài Hước","Kinh Dị","Phép Thuật","Phiêu Lưu","Tài Liệu", "Tâm Lý","Tình Cảm","Viễn Tưởng","Võ Thuật"].each do |name|
   Category.create name: name
 end
 
