@@ -30,6 +30,7 @@
               <p class="nation-info">Nước sản xuất: <%= @post.nation %></p>
               <p class="view-info">Lượt xem: <%= @post.view %></p>
             </div>
+            <p><%= social_share_button_tag @post.title, url: request.original_url %></p>
           </div>
         </div>
         <!-- <div class="row-2">
@@ -101,7 +102,7 @@
           <% end %>
         </div>
       </div>
-      <div class="clearfix"><p><%= will_paginate @posts %></p> </div>
+      <div class="clearfix"></div>
     </div>
   </div>
 </div>
