@@ -17,3 +17,4 @@
 //= require social-share-button
 //= require jquery.raty
 //= require ratyrate
+//= require semantic.min.js

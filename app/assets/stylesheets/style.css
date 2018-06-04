@@ -1,9 +1,4 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+@import font-awesome
 html, body{
     font-size: 100%;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -1403,6 +1398,7 @@ h3.head {
 
 .image-post-news {
   width: 170px;
+  height: 250px;
 }
 
 .agileits-post-top {
@@ -1596,3 +1592,35 @@ h3.head {
     color: #468847;
     text-align: left;
  }
+
+ .image-show {
+    width: 182px;
+    height: 268px;
+ }
+
+.img-home {
+    width: 182px;
+    height: 268px;
+}
+
+.image-up-next {
+    width: 101px;
+    height: 148px;
+}
+
+.new-post {
+    background-color: white;
+}
+
+.submit-new-post {
+    float: right;
+}
+
+.btn-info {
+    width: 150px;
+    height: 50px;
+}
+
+.btn-info:hover {
+    background-color: #FF8D1B;
+}

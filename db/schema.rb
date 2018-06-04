@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20180607052251) do
     t.string   "magnet_link"
     t.string   "subscene"
     t.string   "directors"
-    t.string   "cats"
+    t.string   "cast"
     t.integer  "view"
     t.string   "image"
     t.integer  "time"
@@ -113,7 +113,6 @@ ActiveRecord::Schema.define(version: 20180607052251) do
     t.string   "unconfirmed_email"
     t.string   "provider"
     t.string   "uid"
-    t.string   "reset_digest"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

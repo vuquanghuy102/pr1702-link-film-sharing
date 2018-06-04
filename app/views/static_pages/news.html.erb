@@ -21,6 +21,9 @@
 							<ul id="myTab" class="nav nav-tabs" role="tablist">
 								<li role="presentation" class="active"><a href="#home1" id="home1-tab" role="tab" data-toggle="tab" aria-controls="home1" aria-expanded="true">Latest News</a></li>
 								<li role="presentation"><a href="#w3bsd" role="tab" id="w3bsd-tab" data-toggle="tab" aria-controls="w3bsd">Movie News</a></li>
+								<% if user_signed_in? %>
+									<li ><%= link_to "Create Post", new_post_path %></li>
+								<% end %>
 							</ul>
 							<div id="myTabContent" class="tab-content">
 								<div role="tabpanel" class="tab-pane fade in active" id="home1" aria-labelledby="home1-tab">
@@ -29,8 +32,8 @@
 											<div class="wthree-news-top-left">
 												<div class="col-md-12 w3-agileits-news-left">
 													<div class="col-sm-4 wthree-news-img">
-														<%= link_to post_path(post), class: "image-post-news" do %>
-															<%= image_tag(post.image) %>
+														<%= link_to post_path(post) do %>
+															<%= image_tag(post.image, class: "image-post-news") %>
 														<% end %>
 													</div>
 													<div class="col-sm-7 wthree-news-info">
