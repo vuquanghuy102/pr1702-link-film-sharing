@@ -4,6 +4,8 @@ class Post < ApplicationRecord
   has_many :post_categories
   has_many :categories, through: :post_categories
 
+  ratyrate_rateable "rating", "quality", "original_score"
+
   scope :load_info_home, -> {
     select("id, title, image, year, view")
   }

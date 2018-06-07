@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/news",    to: "static_pages#news"
   get "/contact", to: "static_pages#contact"
   get "/genres",  to: "static_pages#genres"
+  post "/rate",   to: "rater#create"
 
   resources :posts, only: [:show] do
     resources :comments
