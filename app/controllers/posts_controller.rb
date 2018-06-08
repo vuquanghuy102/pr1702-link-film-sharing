@@ -20,6 +20,11 @@ class PostsController < ApplicationController
       # flash[:danger] = t("controller.posts.show.not_found")
       redirect_to root_url
     end
+
+    # increase_view when reload
+    # @post.increment!(:view)
+    increment_view
+
     @posts = Post.load_info_post_new.all_except(params[:id])
     @comments = Comment.where(post_id: @post).order("created_at DESC")
   end
@@ -32,5 +37,23 @@ class PostsController < ApplicationController
 
   def get_category
     @category = Category.load_name_category
+  end
+
+  def increment_view
+    session_id = request.session_options[:id]
+    is_increment = false
+
+    if session_id.present?
+      session[:view_post] = {} unless session[:view_post]
+
+      if (session_id != session[:view_post]["post_id_#{@post.id}"])
+        is_increment = true
+        session[:view_post]["post_id_#{@post.id}"] = session_id
+      end
+    else
+      is_increment = true
+    end
+
+    @post.increment!(:view) if is_increment
   end
 end
