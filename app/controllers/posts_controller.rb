@@ -19,11 +19,9 @@ class PostsController < ApplicationController
     if @post.nil?
       # flash[:danger] = t("controller.posts.show.not_found")
       redirect_to root_url
+    else
+      increment_view
     end
-
-    # increase_view when reload
-    # @post.increment!(:view)
-    increment_view
 
     @posts = Post.load_info_post_new.all_except(params[:id])
     @comments = Comment.where(post_id: @post).order("created_at DESC")
