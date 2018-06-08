@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "/genres",  to: "static_pages#genres"
   post "/rate",   to: "rater#create"
 
-  resources :posts, only: [:show] do
+  resources :posts, only: [:show, :new, :create] do
     resources :comments
   end
   resources :search, only: [:index]

@@ -5,6 +5,15 @@ class Post < ApplicationRecord
   has_many :categories, through: :post_categories
 
   ratyrate_rateable "rating", "quality", "original_score"
+  mount_uploader :image, ImageUploader
+
+  validates :title, presence: true
+  validates :content, presence: true
+  validates :original_name, presence: true
+  validates :time, presence: true
+  validates :nation, presence: true
+  validates :image, presence: true
+  validates :year, numericality: {greater_than_or_equal_to: 1950, only_integer: true }
 
   scope :load_info_home, -> {
     select("id, title, image, year, view")

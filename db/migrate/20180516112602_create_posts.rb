@@ -8,7 +8,7 @@ class CreatePosts < ActiveRecord::Migration[5.0]
       t.string :magnet_link
       t.string :subscene
       t.string :directors
-      t.string :cats
+      t.string :cast
       t.integer :view
       t.string :image
       t.integer :time
