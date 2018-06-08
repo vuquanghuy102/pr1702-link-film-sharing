@@ -42,6 +42,7 @@ gem "faker", "~> 1.8", ">= 1.8.7"
 gem 'ransack'
 gem 'will_paginate', '~> 3.1.0'
 gem 'social-share-button'
+gem 'ratyrate'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

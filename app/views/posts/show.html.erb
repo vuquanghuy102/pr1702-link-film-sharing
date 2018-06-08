@@ -33,6 +33,12 @@
             <p><%= social_share_button_tag @post.title, url: request.original_url %></p>
           </div>
         </div>
+
+        <div>
+        <%= rating_for @post, "rating", star: 5, disable_after_rate: true, imdb_avg: true,
+        half_show: true, enable_half: true, cancel_hint: 'Cancel this vote!', target: '#hintDiv' %>
+        <div id="hintDiv"></div>
+        </div>
         <!-- <div class="row-2">
           <div class="menu-info-post">
             <ul class="nav nav-info-post">
