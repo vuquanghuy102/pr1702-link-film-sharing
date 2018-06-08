@@ -1467,10 +1467,6 @@ h3.head {
   height: 300px;
 }
 
-.row-2 {
-  /*background-color: #333;*/
-}
-
 .nav-info-post {
   margin-top: 15px;
 }
@@ -1623,4 +1619,8 @@ h3.head {
 
 .btn-info:hover {
     background-color: #FF8D1B;
+}
+
+.info-user {
+    height: 100px;
 }
