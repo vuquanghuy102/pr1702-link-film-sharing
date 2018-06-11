@@ -28,7 +28,21 @@
               <p class="nation-info">Nước sản xuất: <%= @post.nation %></p>
               <p class="view-info">Lượt xem: <%= @post.view %></p>
             </div>
-            <p><%= social_share_button_tag @post.title, url: request.original_url %></p>
+            <ul class="control-post">
+              <li><%= social_share_button_tag @post.title, url: request.original_url %></li>
+              <% if current_user == @post.user %>
+                <li>
+                  <%= link_to post_path(@post), method: :delete do %>
+                    <i class="fa fa-trash fa-4x" title="Delete Post"></i>
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to edit_post_path(@post) do %>
+                    <i class="fa fa-edit fa-4x" title="Edit Post"></i>
+                  <% end %>
+                </li>
+              <% end%>
+            </ul>
           </div>
         </div>
 

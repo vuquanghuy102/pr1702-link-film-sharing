@@ -1624,3 +1624,21 @@ h3.head {
 .info-user {
     height: 100px;
 }
+
+.control-post {
+    list-style-type: none;
+    display: flex;
+}
+
+.fa-edit {
+    margin-left: 8px;
+    margin-top: 3px;
+}
+
+.fa-trash {
+    margin-top: -1px;
+}
+
+.social-share-button {
+    margin-top: 5px;
+}

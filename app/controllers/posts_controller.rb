@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_action :get_category
+  before_action :find_post, only: [:destroy, :edit, :update]
+  before_action :post_owner, only: [:destroy, :edit, :update]
 
   def new
     @post = Post.new
@@ -25,6 +27,25 @@ class PostsController < ApplicationController
 
     @posts = Post.load_info_post_new.all_except(params[:id])
     @comments = Comment.where(post_id: @post).order("created_at DESC")
+  end
+
+  def destroy
+    if @post.destroy
+      redirect_to root_url
+    else
+      redirect_to post_path(@post)
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to post_path(@post)
+    else
+      redirect_to edit_post_path
+    end
   end
 
   private
@@ -53,5 +74,18 @@ class PostsController < ApplicationController
     end
 
     @post.increment!(:view) if is_increment
+  end
+
+  def find_post
+    @post = Post.find_by(id: params[:id])
+    return if @post
+    redirect_to root_url
+  end
+
+  def post_owner
+    unless current_user.id == @post.user_id
+      flash[:notice] = "You can not do that"
+      redirect_to @post
+    end
   end
 end
