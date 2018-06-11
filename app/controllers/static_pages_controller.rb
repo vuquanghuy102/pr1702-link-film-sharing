@@ -6,7 +6,7 @@ class StaticPagesController < ApplicationController
   def contact; end
 
   def news
-    @posts = @q.result.load_info_new
+    @posts = Post.load_info_new
   end
 
   def genres; end

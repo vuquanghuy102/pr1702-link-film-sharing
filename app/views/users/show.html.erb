@@ -1,0 +1,37 @@
+<% provide(:title, "Profile") %>
+<div class="row info-user">
+  <h1>Tên của bạn: <%= @user.name %></h1>
+  <li><%= link_to "Edit profile", edit_user_registration_path %></li>
+</div>
+<div class="row info-post-user">
+  <h1>Các bài đăng của bạn:</h1>
+  <div id="myTabContent" class="tab-content">
+    <div role="tabpanel" class="tab-pane fade in active" id="home1" aria-labelledby="home1-tab">
+      <% if @posts.present? %>
+        <% @posts.each do |post| %>
+          <div class="wthree-news-top-left">
+            <div class="col-md-12 w3-agileits-news-left">
+              <div class="col-sm-4 wthree-news-img">
+                <%= link_to post_path(post) do %>
+                  <%= image_tag(post.image, class: "image-post-news") %>
+                <% end %>
+              </div>
+              <div class="col-sm-7 wthree-news-info">
+                <h5><%= link_to post.title, post_path(post) %></h5>
+                <p><%= post.original_name %></p>
+                <p>Người đăng: <%= post.user.name %></p>
+                <p><%= truncate(post.content, length: 230) %></p>
+                <ul>
+                  <li><i class="fa fa-clock-o" aria-hidden="true"></i>Năm sản xuất: <%= post.year %></li>
+                  <li><i class="fa fa-eye" aria-hidden="true"></i>Lượt xem: <%= post.view %></li>
+                </ul>
+              </div>
+              <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
