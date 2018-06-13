@@ -120,6 +120,11 @@
               </li>
               <li><%= link_to "contact", contact_path%></li>
               <li><%= link_to "news", news_path %></li>
+              <li>
+                <% if user_signed_in? %>
+                  <%= link_to "All Users", users_path %>
+                <% end %>
+              </li>
             </ul>
           </nav>
         </div>
