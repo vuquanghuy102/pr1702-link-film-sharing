@@ -22,3 +22,6 @@
 
 # Test
 /test/*
+
+# Public
+/public/uploads/*

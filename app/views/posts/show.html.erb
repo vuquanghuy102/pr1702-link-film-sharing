@@ -32,7 +32,7 @@
               <li><%= social_share_button_tag @post.title, url: request.original_url %></li>
               <% if current_user == @post.user %>
                 <li>
-                  <%= link_to post_path(@post), method: :delete do %>
+                  <%= link_to post_path(@post), method: :delete,data: {confirm: "Are you sure?"} do %>
                     <i class="fa fa-trash fa-4x" title="Delete Post"></i>
                   <% end %>
                 </li>
