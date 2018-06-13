@@ -27,6 +27,10 @@ class Post < ApplicationRecord
     select("id, title, original_name, image, view, user_id")
   }
 
+  scope :load_time_create_post, -> {
+    select("id, created_at, title, user_id")
+  }
+
   scope :all_except, ->(post_id) {where.not(id: post_id)}
 
   def category_name

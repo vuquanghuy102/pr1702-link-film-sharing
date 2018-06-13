@@ -1397,8 +1397,8 @@ h3.head {
 }
 
 .image-post-news {
-  width: 170px;
-  height: 250px;
+  width: 127px;
+  height: 187px;
 }
 
 .agileits-post-top {
@@ -1641,4 +1641,8 @@ h3.head {
 
 .social-share-button {
     margin-top: 5px;
+}
+
+.w3-agileits-news-left {
+    margin-bottom: 30px;
 }
