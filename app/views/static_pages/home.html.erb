@@ -42,20 +42,20 @@
   </div>
 <!-- general -->
   <div class="general">
-    <h4 class="latest-text w3_latest_text">FEATURED MOVIES</h4>
+    <h4 class="latest-text w3_latest_text">TOP MOVIES</h4>
     <div class="container">
       <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
         <ul id="myTab" class="nav nav-tabs" role="tablist">
           <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Featured</a></li>
-          <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Top viewed</a></li>
+          <li role="presentation"><a href="#view" role="tab" id="view-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Top viewed</a></li>
           <li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Top Rating</a></li>
-          <li role="presentation"><a href="#imdb" role="tab" id="imdb-tab" data-toggle="tab" aria-controls="imdb" aria-expanded="false">Recently Added</a></li>
         </ul>
         <div id="myTabContent" class="tab-content">
+          <!-- Home Tab -->
           <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
             <div class="w3_agile_featured_movies">
-              <% if @posts.present? %>
-                <% @posts.each do |post| %>
+              <% if @posts_new.present? %>
+                <% @posts_new.each do |post| %>
                   <div class="col-md-2 w3l-movie-gride-agile">
                     <%= link_to post_path(post), class: "hvr-shutter-out-horizontal" do %>
                       <%= image_tag(post.image, class: "img-home") %>
@@ -78,6 +78,65 @@
                 <% end %>
               <% end %>
             <div class="clearfix"> </div>
+            </div>
+          </div>
+          <!-- Rating Tab -->
+          <div role="tabpanel" class="tab-pane fade" id="rating" aria-labelledby="rating-tab">
+            <div class="w3_agile_featured_movies">
+              <% if @posts_rating.present? %>
+                <% @posts_rating.each do |post| %>
+                  <div class="col-md-2 w3l-movie-gride-agile">
+                    <%= link_to post_path(post), class: "hvr-shutter-out-horizontal" do %>
+                      <%= image_tag(post.image, class: "img-home") %>
+                      <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                    <% end %>
+                    <div class="mid-1 agileits_w3layouts_mid_1_home">
+                      <div class="w3l-movie-text">
+                        <h6><%= link_to post.title, post_path(post) %></h6>
+                      </div>
+                      <div class="mid-2 agile_mid_2_home">
+                        <%= post.year %>
+                        View: <%= post.view %>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                    <div class="ribben">
+                      <p>NEW</p>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+            <div class="clearfix"> </div>
+            </div>
+          </div>
+          <!--  -->
+          <div role="tabpanel" class="tab-pane fade" id="view" aria-labelledby="view-tab">
+            <div class="w3_agile_featured_movies">
+              <% if @posts_view.present? %>
+                <% @posts_view.each do |post| %>
+                  <div class="col-md-2 w3l-movie-gride-agile">
+                    <%= link_to post_path(post), class: "hvr-shutter-out-horizontal" do %>
+                      <%= image_tag(post.image, class: "img-home") %>
+                      <div class="w3l-action-icon"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+                    <% end %>
+                    <div class="mid-1 agileits_w3layouts_mid_1_home">
+                      <div class="w3l-movie-text">
+                        <h6><%= link_to post.title, post_path(post) %></h6>
+                      </div>
+                      <div class="mid-2 agile_mid_2_home">
+                        <%= post.year %>
+                        View: <%= post.view %>
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                    <div class="ribben">
+                      <p>NEW</p>
+                    </div>
+                  </div>
+                <% end %>
+              <% end %>
+            <div class="clearfix"> </div>
+            </div>
           </div>
         </div>
       </div>
