@@ -46,13 +46,13 @@
     <div class="container">
       <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
         <ul id="myTab" class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Featured</a></li>
-          <li role="presentation"><a href="#view" role="tab" id="view-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">Top viewed</a></li>
+          <li role="presentation" class="active"><a href="#new" id="new-tab" role="tab" data-toggle="tab" aria-controls="new" aria-expanded="true">New Movie</a></li>
+          <li role="presentation"><a href="#view" role="tab" id="view-tab" data-toggle="tab" aria-controls="view" aria-expanded="false">Top viewed</a></li>
           <li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Top Rating</a></li>
         </ul>
         <div id="myTabContent" class="tab-content">
           <!-- Home Tab -->
-          <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+          <div role="tabpanel" class="tab-pane fade active in" id="new" aria-labelledby="new-tab">
             <div class="w3_agile_featured_movies">
               <% if @posts_new.present? %>
                 <% @posts_new.each do |post| %>

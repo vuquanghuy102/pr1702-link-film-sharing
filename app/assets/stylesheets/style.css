@@ -1473,7 +1473,7 @@ h3.head {
 
 .menu-info-post {
   background-color: #333;
-  height: 300px;
+  height: 42px;
 }
 
 .item-info-post {
@@ -1483,7 +1483,6 @@ h3.head {
 
 .info-content {
   text-align: center;
-  width: 100%;
 }
 
 .info-trailer {
@@ -1494,10 +1493,6 @@ h3.head {
   text-align: center;
 }
 
-.info-comment {
-  text-align: center;
-}
-
 .info-content-post {
   margin-top: 10px;
   background-color: #333;
@@ -1505,22 +1500,24 @@ h3.head {
 }
 
 .content-post{
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .magnet-link {
+  font-size: 20px;
   font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  color: #ffffff;
 }
 
 .subscene {
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-.info-trailer-post {
+.info-myTab-post {
   margin-top: 10px;
   background-color: #333;
   color: #7a8293;
@@ -1536,7 +1533,7 @@ h3.head {
   margin-top: 10px;
   background-color: #333;
   color: #7a8293;
-  height: 200px;
+  height: 500px;
 }
 
 .directors-post {
@@ -1552,7 +1549,7 @@ h3.head {
   color: #fff;
   border-bottom: 1px solid;
   border-color: yellow;
-  margin-top: 20px;
+  margin-top: 100px;
   margin-bottom: 15px
 }
 
