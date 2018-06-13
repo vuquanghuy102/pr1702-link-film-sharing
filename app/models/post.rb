@@ -1,4 +1,6 @@
 class Post < ApplicationRecord
+  attr_reader :rate_avg
+
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_many :post_categories, dependent: :destroy
@@ -35,5 +37,9 @@ class Post < ApplicationRecord
 
   def category_name
     categories.pluck(:name).join ", "
+  end
+
+  def rate_avg
+    rating_average ? rating_average.avg : 0
   end
 end
