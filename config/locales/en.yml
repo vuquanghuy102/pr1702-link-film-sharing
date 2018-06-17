@@ -1,23 +1,161 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  is_not_supported: "is not supported"
+  category_not_found: "Category not found"
+  you_can_not_do_that: "You can not do that"
+  all_post: "All posts"
+  search_for: "Search for: %{search_param}"
+  comments:
+    comment:
+      delete_comment: "Delete comment"
+      edit_comment: "Edit comment"
+  devise:
+    confirmations:
+      new:
+        resend_comfirmation_instructions: "Resend confirmation instructions"
+    mailer:
+      confirmation_instructions:
+        confirm_my_account: "Confirm my account"
+      email_changed:
+        changed_email: "We're contacting you to notify you that your email is being changed to"
+      password_change:
+        hello: "Hello"
+        change_password: "We're contacting you to notify you that your password has been changed."
+      reset_password:
+        hello: "Hello"
+        change_password_info_1: "Someone has requested a link to change your password. You can do this through the link below."
+        change_password_info_2: "If you didn't request this, please ignore this email."
+        change_password_info_3: "Your password won't change until you access the link above and create a new one."
+      unlock_instructions:
+        hello: "Hello"
+        unlock_account_info_1: "Your account has been locked due to an excessive number of unsuccessful sign in attempts."
+        unlock_account_info_2: "Click the link below to unlock your account:"
+    passwords:
+      edit:
+        change_your_password: "Change your password"
+        new_password: "New password"
+        confirm_new_password: "Confirm new password"
+        change_my_password: "Change my password"
+      new:
+        forgot_your_password: "Forgot your password?"
+        send: "Send"
+    registrations:
+      edit:
+        edit: "Edit "
+        currently_waiting_confirmation_for: "Currently waiting confirmation for: "
+        leave_blank_if_you_don't_want_to_change_it: "(leave blank if you don't want to change it)"
+        characters_minimum: " characters minimum"
+        we_need_your_current_password_to_confirm_your_changes: "(we need your current password to confirm your changes)"
+        update: "Update"
+        cancel_my_account: "Cancel my account"
+        are_you_sure?: "Are you sure?"
+        back: "Back"
+      new:
+        sign_up: "Sign up"
+        characters_minimum: " characters minimum)"
+    sessions:
+      new:
+        log_in: "Log in"
+    shared:
+      error_messages:
+        the_form_contains: "The form contains "
+      links:
+        log_in: "Log in"
+        sign_up: "Sign up"
+        forgot_your_password?: "Forgot your password?"
+        didn't_receive_confirmation_instructions?: "Didn't receive confirmation instructions?"
+        didn't_receive_unlock_instructions?: "Didn't receive unlock instructions?"
+        #sign_in_with: "Sign in with"
+    unlocks:
+      new:
+        resend_unlock_instructions: "Resend unlock instructions"
+  layouts:
+    footer:
+      caption: " 2018 One Movies. All rights reserved | Design by "
+    header:
+      search: "Search"
+      go: "Go"
+      profile: "Profile"
+      logout: "Logout"
+      register: "Register"
+      login: "Login"
+      toggle_navigation: "Toggle navigation"
+      home: "Home"
+      genres: "Genres"
+      contact: "contact"
+      news: "Post"
+      all_users: "All Users"
+  posts:
+    edit:
+      update_post: "Update post"
+      title: "Title: "
+      content: "Content: "
+      original_name: "Original Name: "
+      image: "Image: "
+      directors: "Directors: "
+      cast: "Cast: "
+      date_of_manufacture: "Date Of Manufacture: "
+      time: "Time: "
+      magnet_link: "Magnet Link: "
+      subscene_link: "Subscene Link: "
+      trailer: "Trailer id: "
+      nation: "Nation: "
+      category: "Genres: "
+    new:
+      update_post: "Update post"
+      title: "Title: "
+      content: "Content: "
+      original_name: "Original Name: "
+      image: "Image: "
+      directors: "Directors: "
+      cast: "Cast: "
+      date_of_manufacture: "Date Of Manufacture: "
+      time: "Time: "
+      magnet_link: "Magnet Link: "
+      subscene_link: "Subscene Link: "
+      trailer: "Trailer id: "
+      nation: "Nation: "
+      category: "Genres: "
+    show:
+      home: "Home"
+      post: "Post"
+      min: " min"
+      poster: "Poster: "
+      directors: "Directors: "
+      cast: "Cast: "
+      nation: "Nation: "
+      view: "View: "
+      are_you_sure?: "Are you sure?"
+      # delete_post: "Delete Post"
+      # edit_post: "Edit Post"
+      content: "Content"
+      trailer: "Trailer"
+      component: "Component"
+      content_1: "Content: "
+      magnet_link: "Magnet Link: "
+      subscene_link: "Subscene Link: "
+      directors_1: "Directors"
+      cast_1: "Cast"
+      comment: "Comment"
+      up_next: "Up Next"
+  search:
+    index:
+      view: "View: "
+  static_pages:
+    contact:
+      contact: "Contact"
+      contact_us: "Contact Us"
+      address: "Address"
+      call: "Call"
+      email: "Email"
+    home:
+      home: "Home"
+      top_movies: "TOP MOVIES"
+      new_movie: "New Movie"
+      top_viewed: "Top viewed"
+      top_rating: "Top Rating"
+    news:
+      new: "New"
+      home: "Home"
+      movie_news: "Movie News"
+      updated_news: "Updated News"
+      posted_a_new_post: " posted a new post "

@@ -12,7 +12,6 @@ class CategoriesController < ApplicationController
   def load_category
     @category = Category.find_by id: params[:id]
     return if @category
-    flash[:danger] = "Category not found"
-    redirect_to root_url
+    flash[:danger] = t('category_not_found')
   end
 end

@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_path(@post)
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -30,7 +30,7 @@ class CommentsController < ApplicationController
     if @comment.update(comment_params)
       redirect_to post_path(@post)
     else
-      render 'edit'
+      render :edit
     end
   end
 
@@ -46,7 +46,7 @@ class CommentsController < ApplicationController
 
   def comment_owner
     unless current_user.id == @comment.user_id
-      flash[:notice] = "You can not do that"
+      flash[:notice] = t("you_can_not_do_that")
       redirect_to @post
     end
   end

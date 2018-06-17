@@ -84,7 +84,7 @@ class PostsController < ApplicationController
 
   def post_owner
     unless current_user.id == @post.user_id
-      flash[:notice] = "You can not do that"
+      flash[:notice] = t("you_can_not_do_that")
       redirect_to @post
     end
   end

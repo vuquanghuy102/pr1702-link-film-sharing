@@ -1,4 +1,4 @@
-<% provide(:title, "News") %>
+<% provide(:title, t(".new")) %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +10,8 @@
 		<div class="container">
 			<div class="agileits-news-top">
 				<ol class="breadcrumb">
-				  <li><%= link_to "Home", root_path %></li>
-				  <li class="active">News</li>
+				  <li><%= link_to t(".home"), root_path %></li>
+				  <li class="active"><%= t(".new") %></li>
 				</ol>
 			</div>
 			<div class="agileinfo-news-top-grids">
@@ -19,7 +19,7 @@
 					<div class="wthree-news-left">
 						<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 							<ul id="myTab" class="nav nav-tabs" role="tablist">
-								<li role="presentation" class="active"><a href="#w3bsd" role="tab" id="w3bsd-tab" data-toggle="tab" aria-controls="w3bsd">Movie News</a></li>
+								<li role="presentation" class="active"><a href="#w3bsd" role="tab" id="w3bsd-tab" data-toggle="tab" aria-controls="w3bsd"><%= t(".movie_news") %></a></li>
 								<% if user_signed_in? %>
 									<li ><%= link_to "Create Post", new_post_path %></li>
 								<% end %>
@@ -57,7 +57,7 @@
 					<!-- news-right-top -->
 					<div class="news-right-top">
 						<div class="wthree-news-right-heading">
-							<h3>Updated News</h3>
+							<h3><%= t(".updated_news") %></h3>
 						</div>
 						<div class="wthree-news-right-top">
 							<div class="news-grids-bottom">
@@ -68,7 +68,7 @@
 											<% if @updated_posts.present? %>
 												<% @updated_posts.each do |post| %>
 													<a href="<%= post_path(post) %>"><%= post.created_at %></a>
-													<p><%= post.user.name %> đã đăng bài đăng mới <%= post.title %></p>
+													<p><%= post.user.name %><%= t(".posted_a_new_post") %><%= post.title %></p>
 												<% end %>
 											<% end %>
 										</div>

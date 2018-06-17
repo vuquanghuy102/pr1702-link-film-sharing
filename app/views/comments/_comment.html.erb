@@ -7,7 +7,7 @@
   <p><%= comment.content %></p>
 
   <% if current_user == comment.user %>
-    <%= link_to "Delete comment", [comment.post, comment], method: :delete %>
-    <%= link_to "Edit comment", edit_post_comment_path(comment.post,comment) %>
+    <%= link_to t(".delete_comment"), [comment.post, comment], method: :delete %>
+    <%= link_to t(".edit_comment"), edit_post_comment_path(comment.post,comment) %>
   <% end %>
 <% end %>

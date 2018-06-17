@@ -1,9 +1,9 @@
-<% provide(:title, "Posts") %>
+<% provide(:title, t(".post")) %>
 <div class="container">
   <div class="agileits-post-top">
     <ol class="breadcrumb">
-      <li><%= link_to "Home", root_path %></li>
-      <li class="active">Post</li>
+      <li><%= link_to t("home"), root_path %></li>
+      <li class="active"><%= t(".post") %></li>
     </ol>
   </div>
   <div class="post-page-agile-info">
@@ -19,20 +19,20 @@
               <p><%= @post.original_name %></p>
               <p>
                 <span class="boder-post-info"><%= @post.year %></span>
-                <span class="boder-post-info"><%= @post.time %> min</span>
+                <span class="boder-post-info"><%= @post.time %><%= t(".min") %></span>
                 <span ><%= @post.category_name %></span>
               </p>
-              <p class="poster-info">Người đăng: <%= @post.user.name %></p>
-              <p class="directors-info">Đạo diễn: <%= @post.directors %></p>
-              <p class="cats-info">Diễn viên: <%= @post.cast %></p>
-              <p class="nation-info">Nước sản xuất: <%= @post.nation %></p>
-              <p class="view-info">Lượt xem: <%= @post.view %></p>
+              <p class="poster-info"><%= t(".poster") %><%= @post.user.name %></p>
+              <p class="directors-info"><%= t(".directors") %><%= @post.directors %></p>
+              <p class="cats-info"><%= t(".cast") %><%= @post.cast %></p>
+              <p class="nation-info"><%= t(".nation") %><%= @post.nation %></p>
+              <p class="view-info"><%= t(".view") %><%= @post.view %></p>
             </div>
             <ul class="control-post">
               <li><%= social_share_button_tag @post.title, url: request.original_url %></li>
               <% if current_user == @post.user %>
                 <li>
-                  <%= link_to post_path(@post), method: :delete,data: {confirm: "Are you sure?"} do %>
+                  <%= link_to post_path(@post), method: :delete,data: {confirm: t(".are_you_sure?")} do %>
                     <i class="fa fa-trash fa-4x" title="Delete Post"></i>
                   <% end %>
                 </li>
@@ -54,13 +54,13 @@
           <div class="menu-info-post">
             <ul class="nav nav-info-post" role="tablist">
               <li class="col-md-4 item-info-post" role="presentation" class="active">
-                <a class="info-content" href="#content" id="content-tab" role="tab" data-toggle="tab" aria-controls="content" aria-expanded="true">Nội dung</a>
+                <a class="info-content" href="#content" id="content-tab" role="tab" data-toggle="tab" aria-controls="content" aria-expanded="true"><%= t(".content") %></a>
               </li>
               <li class="col-md-4 item-info-post" role="presentation">
-                <a class="info-trailer" href="#trailer" role="tab" id="trailer-tab" data-toggle="tab" aria-controls="trailer" aria-expanded="false">Trailer</a>
+                <a class="info-trailer" href="#trailer" role="tab" id="trailer-tab" data-toggle="tab" aria-controls="trailer" aria-expanded="false"><%= t(".trailer") %></a>
               </li>
               <li class="col-md-4 item-info-post" role="presentation">
-                <a class="info-ingredient" href="#info" id="info-tab" role="tab" data-toggle="tab" aria-controls="info" aria-expanded="true">Thành phần</a>
+                <a class="info-ingredient" href="#info" id="info-tab" role="tab" data-toggle="tab" aria-controls="info" aria-expanded="true"><%= t(".component") %></a>
               </li>
             </ul>
           </div>
@@ -68,11 +68,11 @@
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane fade active in" id="content" aria-labelledby="content-tab">
             <div class="info-myTab-post">
-              <p class="content-post">Nội dung: </p>
+              <p class="content-post"><%= t(".content_1") %></p>
               <p><%= @post.content %></p>
-              <p class="magnet-link">Magnet Link: </p>
+              <p class="magnet-link"><%= t(".magnet_link") %></p>
               <p><%= @post.magnet_link %></p>
-              <p class="subscene">Subscene: </p>
+              <p class="subscene"><%= t(".subscene_link") %></p>
               <p><%= @post.subscene %></p>
             </div>
             <div class="clearfix"> </div>
@@ -85,9 +85,9 @@
           </div>
           <div role="tabpanel" class="tab-pane fade" id="info" aria-labelledby="info-tab">
             <div class="info-myTab-post">
-              <p class="directors-post">Đạo diễn</p>
+              <p class="directors-post"><%= t(".directors_1") %></p>
               <p><%= @post.directors %></p>
-              <p class="cats-post">Diễn viên</p>
+              <p class="cats-post"><%= t(".cast_1") %></p>
               <p><%= @post.cast %></p>
             </div>
             <div class="clearfix"> </div>
@@ -96,13 +96,13 @@
 
         <div class="row-6">
           <div class="info-ingredient-post">
-            <p class="comment-post">Bình luận về phim</p>
+            <p class="comment-post"><%= t(".comment") %></p>
             <p><%= render 'comments/comment' %></p>
           </div>
         </div>
       </div>
       <div class="col-md-4 single-right">
-        <h3>Up Next</h3>
+        <h3><%= t(".up_next") %></h3>
         <div class="single-grid-right">
           <% if @posts.present? %>
             <% @posts.each do |post| %>
