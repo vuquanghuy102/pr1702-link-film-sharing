@@ -1,60 +1,59 @@
 <%= javascript_include_tag "dropdown.js" %>
 <div class="general">
-  <h4 class="latest-text w3_latest_text">Bài đăng mới</h4>
+  <h4 class="latest-text w3_latest_text"><%= t(".update_post") %></h4>
   <div class="container">
     <%= form_for @post do |f| %>
       <%= render 'devise/shared/error_messages' %>
       <div class="row-1 new-post">
         <div class="col-md-4">
-          Title: <br>
+          <%= t(".title") %><br>
           <%= f.text_field :title %>
           <br>
-          Content: <br>
+          <%= t(".content") %><br>
           <%= f.text_area :content %>
           <br>
-          Original Name: <br>
+          <%= t(".original_name") %><br>
           <%= f.text_field :original_name %>
           <br>
-          Image: <br>
+          <%= t(".image") %><br>
           <%= f.file_field :image %>
           <br>
-
         </div>
         <div class="col-md-4">
-          Directors: <br>
+          <%= t(".directors") %><br>
           <%= f.text_field :directors %>
           <br>
-          Cast: <br>
+          <%= t(".cast") %><br>
           <%= f.text_field :cast %>
           <br>
-          Date Of Manufacture: <br>
+          <%= t(".date_of_manufacture") %><br>
           <%= f.number_field :year %>
           <br>
-          Time: <br>
+          <%= t(".time") %><br>
           <%= f.number_field :time %> min
           <br>
-          Magnet Link: <br>
+          <%= t(".magnet_link") %><br>
           <%= f.text_field :magnet_link %>
           <br>
         </div>
         <div class="col-md-4">
-          Subscene Link: <br>
+          <%= t(".subscene_link") %><br>
           <%= f.text_field :subscene %>
           </br>
-          Trailer: <br>
+          <%= t(".trailer") %><br>
           <%= f.text_field :link_trailer %>
           </br>
-          Nation: <br>
+          <%= t(".nation") %><br>
           <%= f.text_field :nation %>
           <br>
-          Category: <br>
+          <%= t(".category") %><br>
           <%= collection_select(:post, :category_ids, @category, :id, :name, {},
             {multiple: true, class: "ui fluid selection search dropdown"}) %>
           </br>
         </div>
       </div>
       <div class="row-2 submit-new-post">
-        <%= f.submit "Create post", class: "btn btn-info active" %>
+        <%= f.submit t(".update_post"), class: "btn btn-info active" %>
       </div>
     <% end %>
   </div>

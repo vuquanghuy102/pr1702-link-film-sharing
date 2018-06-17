@@ -1,0 +1,161 @@
+vi:
+  is_not_supported: "Không được hỗ trợ"
+  category_not_found: "Không tìm thấy danh mục"
+  you_can_not_do_that: "Bạn không thể làm điều đó"
+  all_post: "Tất cả những bài viết"
+  search_for: "Tìm kiếm theo: %{search_param}"
+  comments:
+    comment:
+      delete_comment: "Xóa bình luận"
+      edit_comment: "Sửa bình luận"
+  devise:
+    confirmations:
+      new:
+        resend_comfirmation_instructions: "Gửi lại hướng dẫn xác nhận"
+    mailer:
+      confirmation_instructions:
+        confirm_my_account: "Xác nhận tài khoản của tôi"
+      email_changed:
+        changed_email: "Chúng tôi liên hệ với bạn để thông báo cho bạn biết rằng email của bạn đang được thay đổi thành"
+      password_change:
+        hello: "Xin chào"
+        change_password: "Chúng tôi liên hệ với bạn để thông báo cho bạn biết rằng mật khẩu của bạn đã bị thay đổi."
+      reset_password:
+        hello: "Xin chào"
+        change_password_info_1: "Ai đó đã yêu cầu một liên kết để thay đổi mật khẩu của bạn. Bạn có thể làm điều này thông qua liên kết bên dưới."
+        change_password_info_2: "Nếu bạn không yêu cầu điều này, vui lòng bỏ qua email này."
+        change_password_info_3: "Mật khẩu của bạn sẽ không thay đổi cho đến khi bạn truy cập vào liên kết ở trên và tạo một mật khẩu mới."
+      unlock_instructions:
+        hello: "Xin chào"
+        unlock_account_info_1: "Tài khoản của bạn đã bị khóa do có quá nhiều lần đăng nhập không thành công."
+        unlock_account_info_2: "Nhấp vào liên kết bên dưới để mở khóa tài khoản của bạn:"
+    passwords:
+      edit:
+        change_your_password: "Thay đổi mật khẩu của bạn"
+        new_password: "Mật khẩu mới"
+        confirm_new_password: "Xác nhận mật khẩu mới"
+        change_my_password: "Thay đổi mật khẩu của tôi"
+      new:
+        forgot_your_password: "Quên mật khẩu?"
+        send: "Gửi"
+    registrations:
+      edit:
+        edit: "Chỉnh sửa "
+        currently_waiting_confirmation_for: "Hiện đang chờ xác nhận cho: "
+        leave_blank_if_you_don't_want_to_change_it: "(để trống nếu bạn không muốn thay đổi)"
+        characters_minimum: " tối thiểu ký tự"
+        we_need_your_current_password_to_confirm_your_changes: "(chúng tôi cần mật khẩu hiện tại của bạn để xác nhận thay đổi của bạn)"
+        update: "Cập nhật"
+        cancel_my_account: "Hủy tài khoản của tôi"
+        are_you_sure?: "Bạn có chắc không?"
+        back: "Trở lại"
+      new:
+        sign_up: "Đăng ký"
+        characters_minimum: " tối thiểu ký tự)"
+    sessions:
+      new:
+        log_in: "Đăng nhập"
+    shared:
+      error_messages:
+        the_form_contains: "Biểu mẫu có chứa "
+      links:
+        log_in: "Đăng nhập"
+        sign_up: "Đăng ký"
+        forgot_your_password?: "Quên mật khẩu?"
+        didn't_receive_confirmation_instructions?: "Không nhận được hướng dẫn xác nhận?"
+        didn't_receive_unlock_instructions?: "Không nhận được hướng dẫn mở khóa?"
+        #sign_in_with: "Sign in with"
+    unlocks:
+      new:
+        resend_unlock_instructions: "Gửi lại hướng dẫn mở khóa"
+  layouts:
+    footer:
+      caption: " 2018 One Movies. Đã đăng ký bản quyền | Thiết kế bởi "
+    header:
+      search: "Tìm kiếm"
+      go: "Tìm"
+      profile: "Hồ sơ"
+      logout: "Đăng xuất"
+      register: "Đăng kí"
+      login: "Đăng nhập"
+      toggle_navigation: "Toggle navigation"
+      home: "Trang chủ"
+      genres: "Thể loại"
+      contact: "Liên hệ"
+      news: "Bài đăng"
+      all_users: "Người dùng"
+  posts:
+    edit:
+      update_post: "Cập nhật bài đăng"
+      title: "Tiêu đề: "
+      content: "Nội dung: "
+      original_name: "Tên chính: "
+      image: "Ảnh: "
+      directors: "Đạo diễn: "
+      cast: "Diễn viên: "
+      date_of_manufacture: "Năm sản xuất: "
+      time: "Thời gian: "
+      magnet_link: "Link tải: "
+      subscene_link: "Link sub: "
+      trailer: "Trailer id: "
+      nation: "Quốc gia: "
+      category: "Thể loại: "
+    new:
+      update_post: "Cập nhật bài đăng"
+      title: "Tiêu đề: "
+      content: "Nội dung: "
+      original_name: "Tên chính: "
+      image: "Ảnh: "
+      directors: "Đạo diễn: "
+      cast: "Diễn viên: "
+      date_of_manufacture: "Năm sản xuất: "
+      time: "Thời gian: "
+      magnet_link: "Link tải: "
+      subscene_link: "Link sub: "
+      trailer: "Trailer id: "
+      nation: "Nước sản xuất: "
+      category: "Thể loại: "
+    show:
+      home: "Trang chủ"
+      post: "Bài đăng"
+      min: " phút"
+      poster: "Người đăng: "
+      directors: "Đạo diễn: "
+      cast: "Diễn viên: "
+      nation: "Nước sản xuất: "
+      view: "Lượt xem: "
+      are_you_sure?: "Are you sure?"
+      # delete_post: "Delete Post"
+      # edit_post: "Edit Post"
+      content: "Nội dung"
+      trailer: "Trailer"
+      component: "Thành phần"
+      content_1: "Nội dung: "
+      magnet_link: "Link tải: "
+      subscene_link: "Link sub: "
+      directors_1: "Đạo diễn"
+      cast_1: "Diễn viên"
+      comment: "Bình luận"
+      up_next: "Phim khác"
+  search:
+    index:
+      view: "Lượt xem: "
+  static_pages:
+    contact:
+      contact: "Liên hệ"
+      contact_us: "Liên hệ với chúng tôi"
+      address: "Địa chỉ"
+      call: "Gọi điện"
+      email: "Email"
+    home:
+      home: "Trang chủ"
+      top_movies: "Phim hàng đầu"
+      new_movie: "Phim mới"
+      top_viewed: "Phim được xem nhiều nhất"
+      top_rating: "Phim đánh giá hàng đầu"
+    news:
+      new: "Bài đăng"
+      home: "Trang chủ"
+      movie_news: "Phim mới"
+      updated_news: "Tin tức cập nhật"
+      posted_a_new_post: " đã đăng một bài đăng mới "

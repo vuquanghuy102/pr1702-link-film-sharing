@@ -1,4 +1,4 @@
-<% provide(:title, "Home") %>
+<% provide(:title, t(".home")) %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,13 +42,13 @@
   </div>
 <!-- general -->
   <div class="general">
-    <h4 class="latest-text w3_latest_text">TOP MOVIES</h4>
+    <h4 class="latest-text w3_latest_text"><%= t(".top_movies") %></h4>
     <div class="container">
       <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
         <ul id="myTab" class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#new" id="new-tab" role="tab" data-toggle="tab" aria-controls="new" aria-expanded="true">New Movie</a></li>
-          <li role="presentation"><a href="#view" role="tab" id="view-tab" data-toggle="tab" aria-controls="view" aria-expanded="false">Top viewed</a></li>
-          <li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true">Top Rating</a></li>
+          <li role="presentation" class="active"><a href="#new" id="new-tab" role="tab" data-toggle="tab" aria-controls="new" aria-expanded="true"><%= t(".new_movie") %></a></li>
+          <li role="presentation"><a href="#view" role="tab" id="view-tab" data-toggle="tab" aria-controls="view" aria-expanded="false"><%= t(".top_viewed") %></a></li>
+          <li role="presentation"><a href="#rating" id="rating-tab" role="tab" data-toggle="tab" aria-controls="rating" aria-expanded="true"><%= t(".top_rating") %></a></li>
         </ul>
         <div id="myTabContent" class="tab-content">
           <!-- Home Tab -->
