@@ -4,6 +4,9 @@ en:
   you_can_not_do_that: "You can not do that"
   all_post: "All posts"
   search_for: "Search for: %{search_param}"
+  categories:
+    show:
+      view: "View: "
   comments:
     comment:
       delete_comment: "Delete comment"
@@ -149,6 +152,7 @@ en:
       email: "Email"
     home:
       home: "Home"
+      view: "View: "
       top_movies: "TOP MOVIES"
       new_movie: "New Movie"
       top_viewed: "Top viewed"

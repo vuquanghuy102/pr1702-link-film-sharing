@@ -4,6 +4,9 @@ vi:
   you_can_not_do_that: "Bạn không thể làm điều đó"
   all_post: "Tất cả những bài viết"
   search_for: "Tìm kiếm theo: %{search_param}"
+  categories:
+    show:
+      view: "Lượt xem: "
   comments:
     comment:
       delete_comment: "Xóa bình luận"
@@ -149,6 +152,7 @@ vi:
       email: "Email"
     home:
       home: "Trang chủ"
+      view: "Lượt xem: "
       top_movies: "Phim hàng đầu"
       new_movie: "Phim mới"
       top_viewed: "Phim được xem nhiều nhất"

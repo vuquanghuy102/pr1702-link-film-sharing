@@ -4,8 +4,7 @@ class CategoriesController < ApplicationController
   def index; end
 
   def show
-    @posts = @category.posts
-      .paginate page: params[:page], per_page: 18
+    @posts = @category.posts.paginate page: params[:page], per_page: 12
   end
 
   private
