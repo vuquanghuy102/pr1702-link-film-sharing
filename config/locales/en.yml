@@ -10,6 +10,8 @@ en:
     show:
       view: "View: "
   comments:
+    create:
+      not_empty: "Content cannot be empty!"
     comment:
       delete_comment: "Delete comment"
       edit_comment: "Edit comment"
