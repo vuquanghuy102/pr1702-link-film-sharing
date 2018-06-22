@@ -1,9 +1,14 @@
-<div id="comment-content-<%= comment.id %>">
-  <p><b><%= comment.user.name %></b></p>
-  <p><%= comment.content %></p>
+<li id="comment-content-<%= comment.id %>" class="dialogbox">
+  <div class="body">
+    <span class="tip tip-right"></span>
+    <div class="message">
+      <p><b><%= comment.user.name %></b></p>
+      <p><%= comment.content %></p>
 
-  <% if current_user == comment.user %>
-    <%= link_to t(".delete_comment"), [comment.post, comment], method: :delete %>
-    <%= link_to t(".edit_comment"), edit_post_comment_path(comment.post,comment) %>
-  <% end %>
-</div>
+      <% if current_user == comment.user %>
+        <%= link_to t(".delete_comment"), [comment.post, comment], method: :delete %>
+        <%= link_to t(".edit_comment"), edit_post_comment_path(comment.post,comment) %>
+      <% end %>
+    </div>
+  </div>
+</li>
