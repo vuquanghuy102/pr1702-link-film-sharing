@@ -170,7 +170,7 @@ en:
   users:
     show:
       edit_profile: "Edit Profile"
-      friends: "Your Friends"
-      your_posts: "Your Posts"
-      name: "Your Name"
+      friends: "Friends"
+      your_posts: "Posts"
+      name: "Name"
       ago: " ago"

@@ -1,7 +1,3 @@
-<% if user_signed_in? %>
-  <%= render 'comments/form' %>
-<% end %>
-
-<div id="comment-list">
+<ul id="comment-list">
   <%= render @comments %>
-</div>
+</ul>
