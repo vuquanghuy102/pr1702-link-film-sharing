@@ -16,6 +16,9 @@
  *= require social-share-button
  *= require semantic.min
  */
+
+@import 'font-awesome';
+
 .social-share-button .ssb-icon {
   background-position: center center !important;
   background-repeat: no-repeat !important;
