@@ -126,6 +126,7 @@ vi:
       home: "Trang chủ"
       post: "Bài đăng"
       min: " phút"
+      show_not_found: "Không tìm thấy bài đăng"
       poster: "Người đăng: "
       directors: "Đạo diễn: "
       cast: "Diễn viên: "

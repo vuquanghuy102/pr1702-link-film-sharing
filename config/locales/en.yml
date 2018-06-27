@@ -126,6 +126,7 @@ en:
       home: "Home"
       post: "Post"
       min: " min"
+      show_not_found: "Post not found"
       poster: "Poster: "
       directors: "Directors: "
       cast: "Cast: "
