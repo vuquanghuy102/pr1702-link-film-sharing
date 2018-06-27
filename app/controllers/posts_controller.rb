@@ -19,13 +19,13 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by id: params[:id]
     if @post.nil?
-      # flash[:danger] = t("controller.posts.show.not_found")
+      flash[:danger] = t(".show_not_found")
       redirect_to root_url
     else
       increment_view
     end
 
-    @posts = Post.load_info_post_new.all_except(params[:id])
+    @posts = Post.load_info_post_new.all_except(params[:id]).limit(10).order("view DESC")
     @comments = Comment.where(post_id: @post).order("created_at DESC")
   end
 

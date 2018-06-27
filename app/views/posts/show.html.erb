@@ -75,19 +75,7 @@
               <p class="subscene"><%= t(".subscene_link") %></p>
               <p><%= @post.subscene %></p>
             </div>
-            <div class="clearfix"> </div>
-              <div class="row-6">
-                <div class="info-ingredient-post">
-                  <p class="comment-post"><%= t(".comment") %></p>
-                  <div id="comments">
-                  <% if user_signed_in? %>
-                    <%= render 'comments/form' %>
-                  <% end %>
-                  </div>
-                </div>
-                <div class="comments"><%= render 'comments/list_comment' %></div>
-              </div>
-            </div>
+          </div>
           <div role="tabpanel" class="tab-pane fade" id="trailer" aria-labelledby="trailer-tab">
             <div class="info-myTab-post">
               <iframe class="playTrailer" src="https://www.youtube.com/embed/<%= @post.link_trailer %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
@@ -103,10 +91,20 @@
             </div>
             <div class="clearfix"> </div>
           </div>
+          <div class="clearfix"> </div>
+            <div class="row-6">
+              <div class="info-ingredient-post">
+                <p class="comment-post"><%= t(".comment") %></p>
+                <div id="comments">
+                <% if user_signed_in? %>
+                  <%= render 'comments/form' %>
+                <% end %>
+                </div>
+              </div>
+              <div class="comments"><%= render 'comments/list_comment' %></div>
+            </div>
+          </div>
         </div>
-
-
-
       </div>
       <div class="col-md-4 single-right">
         <h3><%= t(".up_next") %></h3>
